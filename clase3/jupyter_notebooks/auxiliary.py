@@ -15,7 +15,8 @@ def plot_boundary(X, y, model,
                   colormap_points=('#5471ab', '#d1885c'),
                   labels_axis=("x1", "x2"),
                   legend=True,
-                  legend_title=None
+                  legend_title=None,
+                  marker='o'
                   ):
     # Hotfix for bug in matplotlib 3.8.0.
     # https://github.com/matplotlib/matplotlib/issues/26949/
@@ -45,7 +46,8 @@ def plot_boundary(X, y, model,
         plt.scatter(
             X[y == j, 0], X[y == j, 1],
             c=colormap_points[i], label=label_point[i],
-            s=point_size
+            s=point_size,
+            marker=marker
         )
 
     plt.xlabel(labels_axis[0])
