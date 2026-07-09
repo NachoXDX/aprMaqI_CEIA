@@ -5,7 +5,7 @@ __pycache__/
 alumnos/
 # C extensions
 *.so
-
+*.cbm
 # Distribution / packaging
 .Python
 build/
